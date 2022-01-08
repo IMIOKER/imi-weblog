@@ -23,20 +23,97 @@
 	</div>
 	<div class="card-columns listfeaturedtag">
 
-		{% for post in latest %}
+		
 		<!-- begin post -->
 		<div class="card">
 			<div class="row">
 				<div class="col-md-5 wrapthumbnail">
 					<a href="{% url 'det' post.id %}">
-						<div class="thumbnail" style="background-image:url({{post.image.url}});">
+						<div class="thumbnail" style="background-image:url({% static 'img/sh.jpg' %});">
 						</div>
 					</a>
 				</div>
 				<div class="col-md-7">
 					<div class="card-block">
-						<h2 class="card-title"><a href="{% url 'det' post.id %}">{{post.title}}</a></h2>
-						<h4 class="card-text">{{post.snippet}}</h4>
+						<h2 class="card-title"><a href="{% url 'det' post.id %}">داستان سه شهیدی که کمتر شنیده ایم</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="author-meta">
+								<span class="post-name">ایمان قهرشکن</span><br/>
+								<span class="post-date">1.2022</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="{% url 'det' post.id %}">
+						<div class="thumbnail" style="background-image:url({% static 'img/es.jpg' %});">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="{% url 'det' post.id %}">مقابله با اضطراب کرونا</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="author-meta">
+								<span class="post-name">ایمان قهرشکن</span><br/>
+								<span class="post-date">1.2022</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="{% url 'det' post.id %}">
+						<div class="thumbnail" style="background-image:url({% static 'img/co.jpg' %});">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="{% url 'det' post.id %}">از کرونا دور بمانیم</a></h2>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="author-meta">
+								<span class="post-name">ایمان قهرشکن</span><br/>
+								<span class="post-date">1.2022</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="{% url 'det' post.id %}">
+						<div class="thumbnail" style="background-image:url({% static 'img/do.jpg' %});">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="{% url 'det' post.id %}">دوچرخه | برای شهرم</a></h2>
 						<div class="metafooter">
 							<div class="wrapfooter">
 								<span class="author-meta">
@@ -50,7 +127,7 @@
 			</div>
 		</div>
 		<!-- end post -->
-		{% endfor %}
+		
 
 	</div>
 	</section>
