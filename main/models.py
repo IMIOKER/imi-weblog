@@ -6,7 +6,7 @@ class Posts(models.Model):
     content = models.TextField()
     date = models.DateField(auto_now=True)
     author = models.CharField(max_length=200, blank=True, null=True)
-    image = models.ImageField(upload_to = 'media', default = None)
+    image = models.ImageField(default = None)
     cat = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
