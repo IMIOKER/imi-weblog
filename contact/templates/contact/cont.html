@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>شما بنویسید</title>
+
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'unicons.css' %}">
+    <link rel="stylesheet" href="{% static 'owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'owl.theme.default.min.css' %}">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="{% static 'tooplate-style.css' %}">
+
+    <!--
+
+Tooplate 2115 Marvel
+
+https://www.tooplate.com/view/2115-marvel
+
+-->
+</head>
+
+<body style="background-image: url(../contact/default-img.jpg);">
+<div class="col-lg-6 col-12" style="margin-top: 10%;">
+    <div class="contact-form">
+        <h2 class="mb-4" style="text-align: center;">شما هم مطلبی دارید ؟</h2>
+        <h5 style="text-align: center;">میتوانید در رابطه با موضوع های این وبلاگ نوشته های خود را منتشر کنید</h5>
+        <h6 style="text-align: center; color: rebeccapurple;">نوشته شما بعد از تایید مدریت در سایت قرار خواهد گرفت</h6>
+        <form action="{% url 'cont:cont' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="name" placeholder="نام شما" id="name">
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <input type="text" class="form-control" name="sub" placeholder="موضوع" id="email">
+                </div>
+
+                <div class="col-12">
+                    <textarea name="message" rows="6" class="form-control" id="message"
+                        placeholder="نوشته شما"></textarea>
+                </div>
+            
+                <button type="submit" class="ml-lg-auto col-lg-5 col-12" style="border: 0; background-color: black; border-radius: 10px; color: white; margin-right: 29%; height: 50px;">ارسال</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

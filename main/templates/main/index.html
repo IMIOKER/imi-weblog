@@ -1,0 +1,103 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Begin Site Title
+================================================== -->
+<div class="container" dir="rtl">
+	<div class="mainheading">
+		<h1 class="sitetitle" style="font-family: 'yekan';">ایران زیباتر</h1>
+		<p class="lead">
+			 مردمی شاد تر و حالی خوب تر
+		</p>
+	</div>
+<!-- End Site Title
+================================================== -->
+
+	<!-- Begin Featured
+	================================================== -->
+	<section class="featured-posts">
+	<div class="section-title">
+		<h2><span>جدیدترین پست ها</span></h2>
+	</div>
+	<div class="card-columns listfeaturedtag">
+
+		{% for post in latest %}
+		<!-- begin post -->
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="{% url 'det' post.id %}">
+						<div class="thumbnail" style="background-image:url({{post.image.url}});">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="{% url 'det' post.id %}">{{post.title}}</a></h2>
+						<h4 class="card-text">{{post.snippet}}</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="author-meta">
+								<span class="post-name">{{post.author}}</span><br/>
+								<span class="post-date">{{post.date}}</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+		{% endfor %}
+
+	</div>
+	</section>
+	<!-- End Featured
+	================================================== -->
+
+	<!-- Begin List Posts
+	================================================== -->
+	<section class="recent-posts">
+	<div class="section-title">
+		<h2><span>همه پست ها</span></h2>
+	</div>
+	<div class="card-columns listrecent">
+		{% for post in posts %}
+		<!-- begin post -->
+		<div class="card">
+			<a href="{% url 'det' post.id %}">
+				<img class="img-fluid" src="{{post.image.url}}" alt="">
+			</a>
+			<div class="card-block">
+				<h2 class="card-title"><a href="{% url 'det' post.id %}">{{post.title}}</a></h2>
+				<h4 class="card-text">{{post.snippet}}</h4>
+				<div class="metafooter">
+					<div class="wrapfooter">
+						<span class="author-meta">
+						<span class="post-name">{{post.author}}</span><br/>
+						<span class="post-date">{{post.date}}</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end post -->
+		{% endfor %}
+
+		<!-- begin post -->
+		<div class="card">
+			<a href="{% url 'cont:cont' %}">
+				<img class="img-fluid" src="{% static 'img/add.jpg' %}" alt="">
+			</a>
+			<div class="card-block">
+				<h2 class="card-title"><a href="{% url 'cont:cont' %}">شما بنویسید !</a></h2>
+			</div>
+		</div>
+		<!-- end post -->
+
+	</div>
+	</section>
+	
+{% endblock content %}

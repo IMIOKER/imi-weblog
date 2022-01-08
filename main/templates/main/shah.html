@@ -1,0 +1,58 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Begin Site Title
+================================================== -->
+<div class="container" dir="rtl">
+    <div class="mainheading">
+        <h1 class="sitetitle" style="font-family: 'yekan';">نوشته هایی برای شهرمان</h1>
+    </div>
+    <!-- End Site Title
+================================================== -->
+
+
+    <!-- Begin List Posts
+	================================================== -->
+    <section class="recent-posts">
+        <div class="section-title">
+            <h2><span>همه پست ها</span></h2>
+        </div>
+        <div class="card-columns listrecent">
+            {% for post in posts %}
+            <!-- begin post -->
+            <div class="card">
+                <a href="post.html">
+                    <img class="img-fluid" src="{{post.image.url}}" alt="">
+                </a>
+                <div class="card-block">
+                    <h2 class="card-title"><a href="post.html">{{post.title}}</a></h2>
+                    <h4 class="card-text">{{post.snippet}}</h4>
+                    <div class="metafooter">
+                        <div class="wrapfooter">
+                            <span class="author-meta">
+                                <span class="post-name">{{post.author}}</span><br />
+                                <span class="post-date">{{post.date}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end post -->
+            {% endfor %}
+
+            <!-- begin post -->
+            <div class="card">
+                <a href="{% url 'cont:cont' %}">
+                    <img class="img-fluid" src="{% static 'img/add.jpg' %}" alt="">
+                </a>
+                <div class="card-block">
+                    <h2 class="card-title"><a href="post.html">شما بنویسید !</a></h2>
+                </div>
+            </div>
+            <!-- end post -->
+
+        </div>
+    </section>
+
+    {% endblock content %}

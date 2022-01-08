@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    <title>weblog</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Fonts -->
+    
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/mediumish.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Begin Nav
+================================================== -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+            <!-- Begin Logo -->
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <h3>ایران زیبا</h3>
+            </a>
+            <!-- End Logo -->
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <!-- Begin Menu -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'cont:cont' %}">شما بنویسید</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'covid' %}">مقابله با کرونا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'es' %}">گامی به سوی استقلال</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shahr' %}">شهری که دوستش داریم</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shoh' %}">شهدا</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'home' %}">صفحه اصلی <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <!-- End Menu -->
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+    
+    <!-- Begin Footer
+    	================================================== -->
+    <div class="footer" dir="rtl">
+        <p class="pull-left">
+            ایران زیبا
+        </p>
+        <p class="pull-right">
+            طراحی و ساخت توسط <a target="_blank" href="https://www.linkedin.com/in/imioker/">ایمان قهرشکن</a>
+        </p>
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- End Footer
+    	================================================== -->
+    
+    </div>
+    <!-- /.container -->
+    
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+    </body>
+    
+    </html>

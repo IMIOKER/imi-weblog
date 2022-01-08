@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container" dir="rtl">
+    <div class="row">
+
+        <!-- Begin Fixed Left Share -->
+        <div class="col-md-2 col-xs-12">
+            <div class="share">
+                
+            </div>
+        </div>
+        <!-- End Fixed Left Share -->
+
+        <!-- Begin Post -->
+        <div class="col-md-8 col-md-offset-2 col-xs-12">
+            <div class="mainheading">
+
+                
+
+                <h1 class="posttitle">{{post.title}}</h1>
+
+            </div>
+
+            <!-- Begin Featured Image -->
+            <img class="featured-image img-fluid" src="{{post.image.url}}" alt="">
+            <!-- End Featured Image -->
+
+            <!-- Begin Post Content -->
+            <div class="article-post">
+                <p>
+                    {{post.content}}
+                </p>
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+{% endblock content %}

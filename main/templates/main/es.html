@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="mainheading" dir="rtl">
+        <h1 class="sitetitle" style="font-family: 'yekan';">هنوز مطلبی برای این موضوع نوشته نشده است</h1>
+        <p class="lead">
+            شما می توانید از <a href="{% url 'cont:cont' %}">اینجا</a> بنوسید
+        </p>
+    </div>
+{% endblock content %}
